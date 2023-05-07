@@ -1,0 +1,9 @@
+= Stepper Library for Arduino =
+
+This library allows you to control Marksim BLDC motors. To use it you will need a Marksim Motor Driver, and the appropriate hardware to control it.
+
+For more information about this library please visit us at
+
+
+== License ==
+
