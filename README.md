@@ -3,3 +3,7 @@ This is firmware source code for the mainboard controller a new Open-Source Moti
 
 The Main-Board is designed around ESP32 microcontroler from Expressif.
 The code is written in C using Arduino and run on PlatformIO
+
+Currently the following methods can be used to control the motion-simulator.
+1: Head-tracker with inbuilt IMU chip- Connects to the ESP32 through Bluetooth or via ESP-Now.
+2: UDP plugin from Games Telemetary. Some Games support have been added and will be listed soon.
