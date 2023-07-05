@@ -19,7 +19,7 @@
 
 #include <WebSerial.h>
 
-#include <marksimbase.h>
+#include <opensimbase.h>
 #include <simactions.h>
 #include <FixedConfig.h>
 #include <SaveConfig.h>
@@ -45,10 +45,9 @@
 #include <game_projectcars.h>
 #include <udp_epic_rollercoaster.h>
 #include <game_f122_2.h>
-#include <marksimnow.h>
+#include <opensimnow.h>
 #include <BTN.h>
 #include <telemetry.h>
-
 
 void setup() {
   Serial.begin(115200);
@@ -63,7 +62,6 @@ void setup() {
   loadSine();
   initHD();
 
-  
   setDirectionAntiClockwise(encoder_yaw_channel);//setDirectionClockwise(encoder_yaw_channel);
   defaultPRzero = readDefaultZero();//?
   //setSensorZeroDegrees(encoder_yaw_channel, defaultPRzero);
@@ -79,13 +77,11 @@ int8_t game = epic_rollercoasterDirectUDP;//lfs; //f122; //assettocorsa //projec
 
 void loop() {
 
-    
     doYaw();
     pr1_do();
     pr2_do();
     pr3_do();
     
-
     cxn = Read_AnyController(game);
     Serial.println("Connection State Code: " +String(cxn));
     if(cxn!=cxn_old){
@@ -100,6 +96,7 @@ void loop() {
       doMarkSim_UDP();
     }
 
+    //esp32 motion sim.
 
     doBTN();
 
