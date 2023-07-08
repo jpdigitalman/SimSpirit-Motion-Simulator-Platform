@@ -33,6 +33,32 @@ To get started with SimSpirit, follow these steps:
 6. **Testing and Calibration:** Perform thorough testing and calibration to ensure accurate and reliable motion simulation. Adjust parameters, if necessary, to fine-tune the performance according to your requirements.
 7. **Contribution and Support:** Join the SimSpirit community on GitHub to contribute to the project, share your experiences, and seek assistance from fellow developers and enthusiasts.
 
+## Controlling SimSpirit
+
+SimSpirit offers the convenience of control through the head-tracker, which establishes a connection with the mainboard using the ESPnow protocol. The decision to utilize ESPnow instead of Bluetooth mode stems from the protocol's remarkable low latency. By leveraging ESPnow, SimSpirit ensures responsive and real-time control, enhancing the overall user experience.
+
+## Game Telemetry Control
+
+*SimSpirit can be controlled via game telemetry data.*
+
+In addition to the head-tracker control, SimSpirit offers the capability to be controlled directly through live games telemetry data. It currently supports several popular games, including F1-2022, Life for Speed, and Epic_RollerCoaster, which runs on the Meta Quest2 VR Headset.
+
+SimSpirit enables direct control via WiFi using UDP datagram plugins. By leveraging UDP telemetry data, any game capable of sending UDP packets can control the SimSpirit without the need for intermediate PC USB control. This feature provides limited latency and a seamless and immersive experience for users.
+
+Furthermore, SimSpirit can also be controlled via USB directly from a PC, offering flexibility in control options to suit different setups and preferences.
+
+The SimSpirit game telemetry control features include:
+- Direct control through live games telemetry data.
+- Compatibility with popular games such as F1-2022, Life for Speed, and Epic_RollerCoaster (on the Meta Quest2 VR Headset).
+- Control via WiFi using UDP datagram plugins.
+- Any game capable of sending UDP telemetry data can control the SimSpirit directly, without the need for PC USB control.
+- The SimSpirit can also be controlled via USB directly from a PC.
+- Flexibility in control options to suit different setups and preferences.
+
+Please note that for compatibility with specific games and setups, appropriate configuration and integration may be required. Refer to the documentation and guides for more information on setting up game telemetry control with SimSpirit.
+
+Feel free to let me know if there's anything else you'd like to add or modify!
+
 ## License
 
 SimSpirit is released under the [MIT License](LICENSE). You are free to use, modify, and distribute the platform in accordance with the terms and conditions stated in the license.
