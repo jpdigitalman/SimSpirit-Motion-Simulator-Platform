@@ -50,6 +50,7 @@ long oldangle_yaw[] =   { 0, 0, 0, 0 }; //oldangle = 0.0f
 bool disableAutoStop = false;
 
 /////
+//
 
 bool wifiConnected, wifiSetup_Started, udp_Telemetry = false;
 int8_t connectionState = 0;
