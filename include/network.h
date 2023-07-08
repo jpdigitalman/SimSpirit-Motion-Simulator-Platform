@@ -67,20 +67,14 @@ void loadCustomCredentials(){
   ssid = readFile(SPIFFS, ssidPath);
   pass = readFile(SPIFFS, passPath);
 }
-/*
-void loadDefaultCredentials(){
-  ssid = "SmartRouter-EA04";//"V2026";
-  pass = "AL109dp1";//uj96digital83"; 
-}
-*/
 void loadDefaultCredentials(int vv){
   if(vv == 1){
-    ssid = "V2026";//"CMCC-94hm";
-    pass = "uj96digital83";//"gjvd93ha"; 
+    ssid = "";//"";
+    pass = "";//""; 
   }
   else{
-    ssid = "iPhone";//"SmartRouter-EA04";//"V2026";
-    pass = "98j2hin6mr3ioujpm";//"AL109dp1";//uj96digital83"; 
+    ssid = "";//"SmartRouter-EA04";//"";
+    pass = "";//"";//"; 
   }
 }
 // Create AsyncWebServer object on port 80
@@ -94,7 +88,7 @@ IPAddress local_Gateway(172, 20, 1, 1);
 IPAddress subnet(255, 255, 255, 240);
 //IPAddress primaryDNS(8, 8, 8, 8);   //optional
 //IPAddress secondaryDNS(8, 8, 4, 4); //optional
-const char* host = "marksim"; //http://esp32.local
+const char* host = "SimSpirit"; //http://esp32.local
 
 unsigned long previousMillis = 0;
 const long intervalWifi = 4000;  // interval to wait for Wi-Fi connection (milliseconds)
@@ -258,7 +252,7 @@ void WifiSetup_Submit(){
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
-      request->send(200, "text/html", "Done. Restart Marksim, connect to your router and go to IP address: " + ip + "<div id=\"countdown\"></div><br><progress value=\"0\" max=\"10\" id=\"progressBar\"></progress><script>var timeleft=10,downloadTimer=setInterval((function(){timeleft<=0?(clearInterval(downloadTimer),document.getElementById(\"countdown\").innerHTML=\"Finished\"):(document.getElementById(\"countdown\").innerHTML=timeleft+\" seconds to shutdown\",document.getElementById(\"progressBar\").value=10-timeleft),timeleft-=1}),1e3);</script>");
+      request->send(200, "text/html", "Done. Restart SimSpirit, connect to your router and go to IP address: " + ip + "<div id=\"countdown\"></div><br><progress value=\"0\" max=\"10\" id=\"progressBar\"></progress><script>var timeleft=10,downloadTimer=setInterval((function(){timeleft<=0?(clearInterval(downloadTimer),document.getElementById(\"countdown\").innerHTML=\"Finished\"):(document.getElementById(\"countdown\").innerHTML=timeleft+\" seconds to shutdown\",document.getElementById(\"progressBar\").value=10-timeleft),timeleft-=1}),1e3);</script>");
       yield();
       delay(3000);
       yield();
@@ -270,7 +264,7 @@ void initWifiManager(bool stamode){
     // Connect to Wi-Fi network with SSID and password
     Serial.println("Setting AP (Access Point)");
     // NULL sets an open Access Point
-    WiFi.softAP("MARKSIM-WIFI-MANAGER", NULL);
+    WiFi.softAP("SimSpirit-WIFI-MANAGER", NULL);
 
     IPAddress IP = WiFi.softAPIP();
     Serial.print("AP IP address: ");

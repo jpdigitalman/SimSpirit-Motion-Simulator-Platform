@@ -1,8 +1,14 @@
 /******************************************************************************
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+                            SimSpirit
+                SimSpirit 3 piston-phase Rotation Matrix
+                This code combines the 3 phase pistons for the pitch and roll 
+                and synchronises the movements with yaw direction for ultimate immersion experience
+
+ Developed by John-Paul Madueke 2023
+
+The full code in this section has been deliberately left out.
+Contact the developer to get the full code.
 
 *******************************************************************************/
 
@@ -66,73 +72,31 @@ int phaseA_Sine[3600];
 int phaseB_Sine[3600];
 int phaseC_Sine[3600];
 
-int i_prMax, i_prBoost = 0;
+int i_pitchMax, i_rollMax, i_prBoost = 0;
 
 void loadSine(){
-  for(int i = 0; i < 3600; i++){
-    phaseA_Sine[i] = (sine_wave_Cpt_i[i]-1000);
-    phaseB_Sine[(((i-2400) + 3600) % 3600)] = (sine_wave_Cpt_i[i]-1000);
-    phaseC_Sine[(((i-1200) + 3600) % 3600)] = (sine_wave_Cpt_i[i]-1000);
-  }
-  i_prMax = prMax*100;
-  i_prBoost = prBoost*100;
+  
 }
 
 void simMagic(int &phaseA_Level, int &phaseB_Level, int &phaseC_Level){
     
-  int yawangle = ((((int)pr_init + (int)(htyawdegree*10)) + 360) % 360);
-  int i_yawPoint = (((yawangle+90) + 360) % 360)*10; //add 90 degrees to yaw  
-
-  //house cleaning and dead-band  
-  float dz_pitch = ((htpitchdegree<deadZonePr)&&(htpitchdegree>-deadZonePr))? 0.00 : htpitchdegree;
-  float dz_roll = ((htrolldegree<deadZonePr)&&(htrolldegree>-deadZonePr)) ? 0.00 : htrolldegree;
   
-  //house cleaning and range guard
-  int inv_pitch = -(dz_pitch > 0 ? dz_pitch>prMax ? prMax : dz_pitch : dz_pitch < -prMax ? -prMax : dz_pitch)*100;
-  int inv_roll = -(dz_roll > 0 ? dz_roll>prMax ? prMax : dz_roll : dz_roll < -prMax ? -prMax : dz_roll)*100;
-  
-  int i_pitchPoint = map(inv_pitch, 0, i_prMax, 0, i_prBoost); 
-  int i_rollPoint = map(inv_roll, 0, i_prMax, 0, i_prBoost); 
-  
-  //START
-  int normA = phaseA_Sine[i_yawPoint];
-  int normB = phaseB_Sine[i_yawPoint];
-  int normC = phaseC_Sine[i_yawPoint];
-  
-  /***/
-  int pitchA, pitchB, pitchC = 0;
-  //do positive pitch  and negative pitch
-  pitchA = normA >= 0 ? normA*i_pitchPoint : -(abs(normA))*i_pitchPoint;
-  pitchB = normB >= 0 ? normB*i_pitchPoint : -(abs(normB))*i_pitchPoint;
-  pitchC = normC >= 0 ? normC*i_pitchPoint : -(abs(normC))*i_pitchPoint;
-  /***/
-  
-   /* Shift angle to right angle to get yaw*/  
-  int shiftA = phaseA_Sine[(((i_yawPoint+900) + 3600) % 3600)];  
-  int shiftB = phaseB_Sine[(((i_yawPoint+900) + 3600) % 3600)];  
-  int shiftC = phaseC_Sine[(((i_yawPoint+900) + 3600) % 3600)];  
-  
-  int rollA, rollB, rollC = 0;
-  
-  rollA = shiftA >= 0 ? shiftA*i_rollPoint : -(abs(shiftA))*i_rollPoint;
-  rollB = shiftB >= 0 ? shiftB*i_rollPoint : -(abs(shiftB))*i_rollPoint;
-  rollC = shiftC >= 0 ? shiftC*i_rollPoint : -(abs(shiftC))*i_rollPoint;
+  /***
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+   * 
+  */
   
   /*compute final piston level using Maximum Priority*/
-  phaseA_Level = (pitchA <= 0 && rollA <= 0 ? -(nna(pitchA, rollA)) : -(nne(pitchA, rollA)))/1000;
-  phaseB_Level = (pitchB <= 0 && rollB <= 0 ? -(nna(pitchB, rollB)) : -(nne(pitchB, rollB)))/1000;
-  phaseC_Level = (pitchC <= 0 && rollC <= 0 ? -(nna(pitchC, rollC)) : -(nne(pitchC, rollC)))/1000;
+  phaseA_Level = 0.00f;
+  phaseB_Level = 0.00f;
+  phaseC_Level = 0.00f;
 
-  PRINTLINE("________________________");
-  PRINTLINE("Yaw Position Degree" + String(yawangle));
-  PRINTLINE("Pitch Angle: " + String(htpitchdegree));
-  PRINTLINE("Roll Angle: " + String(htrolldegree));
-  PRINTLINE("________________________");
-  PRINTLINE("________________________");
-  PRINTLINE("Piston A Final Position:" + String(phaseA_Level));
-  PRINTLINE("Piston B Final Position:" + String(phaseB_Level));
-  PRINTLINE("Piston C Final Position:" + String(phaseC_Level));
-  PRINTLINE("________________________");
   
 }
 

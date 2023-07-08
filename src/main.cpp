@@ -19,17 +19,14 @@
 
 #include <WebSerial.h>
 
-#include <opensimbase.h>
-#include <simactions.h>
+#include <simspiritbase.h>
 #include <FixedConfig.h>
 #include <SaveConfig.h>
-#include <VolatileConfig.h>
 
 #include <pulsefast.h>
 #include <stepPulse.h>
 
-//#include <simMagic.h>
-#include <simMagic3.h>
+#include <simMagic6.h>
 #include <simulator__Yaw.h>
 #include <simulator_phaseA.h>
 #include <simulator_phaseB.h>
@@ -37,7 +34,6 @@
 #include <simulator_Run.h>
 
 #include <powerDefaults.h>
-#include <commander.h>
 #include <web.h>
 #include <udpstart.h>
 #include <udp_assetocorsa.h>
@@ -45,7 +41,7 @@
 #include <game_projectcars.h>
 #include <udp_epic_rollercoaster.h>
 #include <game_f122_2.h>
-#include <opensimnow.h>
+#include <simspiritnow.h>
 #include <BTN.h>
 #include <telemetry.h>
 
