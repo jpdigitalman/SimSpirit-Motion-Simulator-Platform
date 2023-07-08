@@ -41,6 +41,8 @@ SimSpirit offers the convenience of control through the head-tracker, which esta
 
 *SimSpirit can be controlled via game telemetry data.*
 
+(udp port default port is 20777) --- *Change the default in /include/pindefines.h  -- find F1_UDP_PORT variable*
+
 In addition to the head-tracker control, SimSpirit offers the capability to be controlled directly through live games telemetry data. It currently supports several popular games, including F1-2022, Life for Speed, and Epic_RollerCoaster, which runs on the Meta Quest2 VR Headset.
 
 SimSpirit enables direct control via WiFi using UDP datagram plugins. By leveraging UDP telemetry data, any game capable of sending UDP packets can control the SimSpirit without the need for intermediate PC USB control. This feature provides limited latency and a seamless and immersive experience for users.
