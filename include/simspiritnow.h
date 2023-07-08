@@ -316,14 +316,14 @@ void doMarkSim_HT(){
 void setupRxNow() {
   
   Serial.println();
-  Serial.print("MarkSim MAC Address:  ");
+  Serial.print("SimSpirit MAC Address:  ");
   Serial.println(WiFi.macAddress());
   Serial.println();
   //
   //uint8_t defaultMACAddress[] = {0x4C, 0xA4, 0x79, 0xE0, 0x23, 0x77};//-----
   //esp_wifi_set_mac(WIFI_IF_STA, &defaultMACAddress[0]);
   
-  Serial.print("[NEW] ESP32 Board MAC Address:  ");
+  Serial.print("[NEW] SimSpirit Board MAC Address:  ");
   Serial.println(WiFi.macAddress());
 
   // Set device as a Wi-Fi Station
@@ -332,15 +332,15 @@ void setupRxNow() {
   //delay(1500);
   // Init ESP-NOW
   if (esp_now_init() != ESP_OK) {
-    Serial.println("Error initializing MarkSim Rx-NOW");
+    Serial.println("Error initializing SimSpirit Rx-NOW");
     return;
   }
   
-  Serial.println("MarkSim Rx-NOW InitSuccess");  
+  Serial.println("SimSpirit Rx-NOW InitSuccess");  
   // Once ESPNow is successfully Init, we will register for recv CB to
   // get recv packer info
   esp_now_register_recv_cb(OnDataRecv);
-  Serial.println("MarkSim ready to Receive HT data");
+  Serial.println("SimSpirit ready to Receive HT data");
   Serial.println("______________________________________");
   Serial.println("______________________________________");
   Serial.println();
