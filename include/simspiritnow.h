@@ -208,13 +208,13 @@ bool checkHTConnection(){
   return HTconnected;
 }
  
- void doMarkSim_UDP(){
+ void doSimSpirit_UDP(){
       if(!setupMode){
           Simulate();
       }
  }
 
-void doMarkSim_HT(){
+void doSimSpirit_HT(){
 
       Serial.println("cmd: " + String(cmdBle));
 

@@ -47,7 +47,7 @@
 
 void setup() {
   Serial.begin(115200);
-  delay(800);
+  delay(500);
   
   getChipID();
   initSPIFFS();
@@ -68,7 +68,7 @@ void setup() {
 
 int8_t cxn, cxn_old = 0;
 
-//(udp port 20777)
+F1_UDP_PORT = 20777;//(udp port 20777)
 int8_t game = epic_rollercoasterDirectUDP;//lfs; //f122; //assettocorsa //projectcars //epic_rollercoasterDashboardUDP //epic_rollercoasterDirectUDP //allgames //
 
 void loop() {
@@ -86,10 +86,10 @@ void loop() {
     }
     
     if(cxn==HT_Data){      
-      doMarkSim_HT();       
+      doSimSpirit_HT();       
     }
     else if(cxn==GameTelemetry){
-      doMarkSim_UDP();
+      doSimSpirit_UDP();
     }
 
     //esp32 motion sim.
