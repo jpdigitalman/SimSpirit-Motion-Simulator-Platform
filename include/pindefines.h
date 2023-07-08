@@ -162,6 +162,6 @@ bool setupMode = false;
 bool manualTurn = false;
 const int8_t encoder_yaw_channel = 2; //select encoder bus channel in i2c multiplexer 0
 
-uint16_t F1_UDP_PORT = 20777; //UDP PORT
+const uint16_t F1_UDP_PORT = 20777; //UDP PORT
 WiFiUDP udp;
 
