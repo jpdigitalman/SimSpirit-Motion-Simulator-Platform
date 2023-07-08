@@ -27,8 +27,8 @@ To get started with SimSpirit, follow these steps:
 
 1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 or BNO085 IMU head-tracker.
 2. **Software Setup:** Install the required software dependencies and libraries on your development environment. This typically involves setting up the Arduino Programming in PlatformIO with the ESP32 board support package.
-3. **Assembly:** Assemble the SimSpirit motion simulator platform according to the provided instructions. Connect the ESP32 mainboard and the LSM6DS3 IMU to their respective interfaces.
-4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the Arduino IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied.
+3. **Assembly:** Assemble the SimSpirit motion simulator platform according to the provided instructions (Coming soon). Connect the ESP32 mainboard to their respective interfaces.
+4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the PlatformIO IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied.
 5. **Integration:** Integrate the SimSpirit motion simulator with your desired application or virtual environment. Use the provided API or SDK to synchronize the motion simulation with the visual and audio elements of your project.
 6. **Testing and Calibration:** Perform thorough testing and calibration to ensure accurate and reliable motion simulation. Adjust parameters, if necessary, to fine-tune the performance according to your requirements.
 7. **Contribution and Support:** Join the SimSpirit community on GitHub to contribute to the project, share your experiences, and seek assistance from fellow developers and enthusiasts.
@@ -39,11 +39,11 @@ SimSpirit is released under the [MIT License](LICENSE). You are free to use, mod
 
 ## Acknowledgments
 
-SimSpirit is made possible by the contributions of numerous individuals and organizations. We would like to express our gratitude to the open-source community for their support, feedback, and valuable contributions to the project.
+SimSpirit is made possible by the use of open source materials obtained online from contributions of numerous individuals and organizations. Hence the justification in making it open source as well. We would like to express our gratitude to the open-source community for the use of their valuable materials in this project.
 
 ## Contact
 
-For inquiries, suggestions, or support regarding SimSpirit, please reach out to the project team at simspirit@example.com.
+For inquiries, suggestions, or support regarding SimSpirit, please reach out to the project director.
 
 ---
 *Note: This README provides a general overview and guide for the SimSpirit motion simulator. For detailed instructions, troubleshooting, and updates, please refer to the project's GitHub repository.*
