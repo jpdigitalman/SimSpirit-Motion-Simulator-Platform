@@ -9,7 +9,6 @@ const char* PARAM_INPUT_2 = "pass";
 const char* PARAM_INPUT_3 = "ip";
 const char* PARAM_INPUT_4 = "gateway";
 
-
 //Variables to save values from HTML form
 String ssid;
 String pass; //98j2hin6mr3ioujpm
