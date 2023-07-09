@@ -80,7 +80,6 @@ void loadSine(){
 
 void simMagic(int &phaseA_Level, int &phaseB_Level, int &phaseC_Level){
     
-  
   /***
    * 
    * 
