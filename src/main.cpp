@@ -69,6 +69,7 @@ void setup() {
 int8_t cxn, cxn_old = 0;
 
 //(udp port 20777)
+//int8_t game = lfs;
 int8_t game = epic_rollercoasterDirectUDP;//lfs; //f122; //assettocorsa //projectcars //epic_rollercoasterDashboardUDP //epic_rollercoasterDirectUDP //allgames //
 
 void loop() {
@@ -93,7 +94,6 @@ void loop() {
     }
 
     //esp32 motion sim.
-
     doBTN();
 
     displayUpdatedSensors();
