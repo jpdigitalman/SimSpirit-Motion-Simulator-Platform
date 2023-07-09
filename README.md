@@ -2,7 +2,7 @@
 This is firmware source code for the mainboard controller a new Open-Source Motion Simulator Platform that is able to perform Yaw, Pitch and Roll based on input from Game-Telemetry Data or Directly from Head-tracker using BNO085 Inertia Measuring Unit
 
 The Main-Board is designed around ESP32 microcontroler from Expressif.
-The code is written in C using Arduino and run on PlatformIO
+The code is written in C using Arduino and run on PlatformIO. The supplied code has been tested to work. The Pitch/Roll syncronization matrix code has been left out. Contact the developer to get the sync code. Only the yaw simulation works with the supplied code without modification.
 
 Currently the following methods can be used to control the motion-simulator.
 1: Head-tracker with inbuilt IMU chip- Connects to the ESP32 through Bluetooth or via ESP-Now.
@@ -30,9 +30,9 @@ To get started with SimSpirit, follow these steps:
 1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 or BNO085 IMU head-tracker.
 2. **Software Setup:** Install the required software dependencies and libraries on your development environment. This typically involves setting up the Arduino Programming in PlatformIO with the ESP32 board support package.
 3. **Assembly:** Assemble the SimSpirit motion simulator platform according to the provided instructions (Coming soon). Connect the ESP32 mainboard to their respective interfaces.
-4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the PlatformIO IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied.
+4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the PlatformIO IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied. The SimSpirit firmware update is based on esp32doit-devkit-v1 setup on the PlatformIO.
 5. **Integration:** Integrate the SimSpirit motion simulator with your desired application or virtual environment. Use the provided API or SDK to synchronize the motion simulation with the visual and audio elements of your project.
-6. **Testing and Calibration:** Perform thorough testing and calibration to ensure accurate and reliable motion simulation. Adjust parameters, if necessary, to fine-tune the performance according to your requirements.
+6. **Testing and Calibration:** Perform thorough testing and calibration to ensure accurate and reliable motion simulation. Adjust parameters, if necessary, to fine-tune the performance according to your requirements. The Yaw movement has no need for manual calibration. Pressing Calibration on the Head-Tracker automatically calibrates the Yaw and the Pitch/Roll to initial position.
 7. **Contribution and Support:** Join the SimSpirit community on GitHub to contribute to the project, share your experiences, and seek assistance from fellow developers and enthusiasts.
 
 ## Controlling SimSpirit
