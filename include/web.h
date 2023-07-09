@@ -45,8 +45,6 @@ void initWebSocket() {
 
 void initWebPage(){
     // Route for root / main page
-    
-
 }
 
 void initOTA(){
