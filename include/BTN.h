@@ -12,8 +12,7 @@ Button2 BOOT_SETUP;
 void longClick(Button2& btn);
 void longClickDetected(Button2& btn);
 
-void setupBTN() {
-  
+void setupBTN() {  
   Serial.println("\n\nButton Setup");
   BOOT_SETUP.begin(BUTTON_PIN);
 
