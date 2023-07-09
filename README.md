@@ -63,8 +63,6 @@ Feel free to let me know if there's anything else you'd like to add or modify!
 
 ## License
 
-## License
-
 SimSpirit is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the platform in accordance with the terms and conditions stated in the license.
 
 ## Acknowledgments
