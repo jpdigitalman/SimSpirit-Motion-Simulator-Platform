@@ -16,6 +16,8 @@ SimSpirit is an open-source motion simulator platform designed for immersive and
 
 - **Open Source:** SimSpirit is an open-source project, allowing developers and enthusiasts to contribute, modify, and enhance the platform.
 - **ESP32 Mainboard:** The motion simulator is built around the powerful and versatile ESP32 microcontroller, providing a robust foundation for control and communication.
+![Image Alt Text](https://github.com/jpdigitalman/SimSpirit-Motion-Simulator-Platform/blob/master/SimSpirit_PCB_Layout/Assembly.png?raw=true)
+
 - **Head-Tracker with LSM6DS3 IMU:** The head-tracker module utilizes the LSM6DS3 or BNO085 inertial measurement unit (IMU) for precise measurement of yaw, pitch, and roll in free space.
 - **Full 360 Degrees Yaw:** SimSpirit enables complete 360 degrees yaw rotation, delivering a comprehensive range of motion for an immersive experience.
 - **Synchronized Pitch and Roll:** The motion simulator's patent-pending algorithm ensures synchronized pitch and roll at any specific yaw position, enhancing realism and accuracy.
