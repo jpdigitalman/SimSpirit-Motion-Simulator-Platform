@@ -682,6 +682,5 @@ void holdMotor(int motor, uint8_t state){
   }
   else if(motor == 3){
       //SIPO2.digitalWrite(BREAK_PR3, state);
-  }
-  
+  }  
 }
