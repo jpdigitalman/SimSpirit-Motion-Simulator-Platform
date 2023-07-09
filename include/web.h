@@ -56,8 +56,7 @@ void initOTA(){
 }
 
 void exeCommand(const char *motor, bool direction){
-  
-  
+    
 }
 
 /* Message callback of WebSerial */
