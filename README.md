@@ -1,7 +1,9 @@
 # SimSpirit-Motion-Simulator-Platform
 This is firmware source code for the mainboard controller a new Open-Source Motion Simulator Platform that is able to perform Yaw, Pitch and Roll based on input from Game-Telemetry Data or Directly from Head-tracker using BNO085 Inertia Measuring Unit.
 
-![Here is an animation of the 3-axis pitch-roll base](https://github.com/jpdigitalman/SimSpirit-Motion-Simulator-Platform/blob/master/Hardware/simspirit-axis-animation.gif?raw=true)
+![SimSpirit 3-axis platform animation](https://github.com/jpdigitalman/SimSpirit-Motion-Simulator-Platform/blob/master/Hardware/simspirit-axis-animation.gif?raw=true)
+
+Here is an animation of the 3-axis pitch-roll platform. The Yaw motor sits on top of the movable pitch-roll platform.
 
 The Main-Board is designed around ESP32 microcontroler from Expressif.
 The code is written in C using Arduino and run on PlatformIO. The supplied code has been fully tested to work. The Pitch/Roll syncronization matrix code has been left out. Contact the developer to get the sync code. Only the yaw simulation works with the supplied code without modification.
