@@ -81,8 +81,7 @@ void loop() {
     
     cxn = Read_AnyController(game);
     Serial.println("Connection State Code: " +String(cxn));
-    if(cxn!=cxn_old){
-      
+    if(cxn!=cxn_old){      
       cxn_old = cxn;
     }
     
