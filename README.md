@@ -1,5 +1,5 @@
 # SimSpirit-Motion-Simulator-Platform
-This is firmware source code for the mainboard controller a new Open-Source Motion Simulator Platform that is able to perform Yaw, Pitch and Roll based on input from Game-Telemetry Data or Directly from ViewTracer using LSM6DS3 Inertia Measuring Unit.
+This is firmware source code for the mainboard controller a new Open-Source Motion Simulator Platform that is able to perform Yaw, Pitch and Roll based on input from Game-Telemetry Data or Directly from ViewTracer© using LSM6DS3 Inertia Measuring Unit.
 
 ![SimSpirit 3-axis platform animation](https://github.com/jpdigitalman/SimSpirit-Motion-Simulator-Platform/blob/master/Hardware/simspirit-axis-animation.gif?raw=true)
 
@@ -9,7 +9,7 @@ The Main-Board is designed around ESP32 microcontroler from Expressif.
 The code is written in C using Arduino and run on PlatformIO. The supplied code has been fully tested to work. The Pitch/Roll syncronization matrix code has been left out. Contact the developer to get the sync code. Only the yaw simulation works with the supplied code without modification.
 
 Currently the following methods can be used to control the motion-simulator.
-1: ViewTracer with inbuilt IMU chip- Connects to the ESP32 mainboard through Bluetooth or via ESP-Now. Currently, ESPnow has been enabled because of its low latency.
+1: ViewTracer© with inbuilt IMU chip- Connects to the ESP32 mainboard through Bluetooth or via ESP-Now. Currently, ESPnow has been enabled because of its low latency.
 2: WiFi- UDP plugin from Games Telemetary. Some Games support have been added. See Telemetry control for list of supported games.
 
 # SimSpirit Motion Simulator
@@ -22,8 +22,8 @@ SimSpirit is an open-source motion simulator platform designed for immersive and
 - **ESP32 Mainboard:** The motion simulator is built around the powerful and versatile ESP32 microcontroller, providing a robust foundation for control and communication.
 ![Image SimSpirit PCB Layout](https://github.com/jpdigitalman/SimSpirit-Motion-Simulator-Platform/blob/master/SimSpirit_PCB_Layout/Assembly.png?raw=true)
 
-- **View-Tracer with LSM6DS3 IMU:** The ViewTracer module utilizes the LSM6DS3 inertial measurement unit (IMU) for precise measurement of yaw, pitch, and roll in free space.
-  The ViewTracer Project is in this [Github page](https://github.com/jpdigitalman/SimSpirit-MotionSimulation-Headtracker)
+- **View-Tracer with LSM6DS3 IMU:** The ViewTracer© module utilizes the LSM6DS3 inertial measurement unit (IMU) for precise measurement of yaw, pitch, and roll in free space.
+  The ViewTracer© Project is in this [Github page](https://github.com/jpdigitalman/SimSpirit-MotionSimulation-Headtracker)
 - **Full 360 Degrees Yaw:** SimSpirit enables complete 360 degrees yaw rotation, delivering a comprehensive range of motion for an immersive experience.
 - **Synchronized Pitch and Roll:** The motion simulator's patent-pending algorithm ensures synchronized pitch and roll at any specific yaw position, enhancing realism and accuracy.
 - **Immersive Experiences:** SimSpirit is designed to provide users with immersive and realistic experiences by precisely simulating the motion corresponding to the virtual environment or application.
@@ -32,7 +32,7 @@ SimSpirit is an open-source motion simulator platform designed for immersive and
 
 To get started with SimSpirit, follow these steps:
 
-1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 IMU ViewTracer.
+1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 IMU ViewTracer©.
 2. **Software Setup:** Install the required software dependencies and libraries on your development environment. This typically involves setting up the Arduino Programming in PlatformIO with the ESP32 board support package.
 3. **Assembly:** Assemble the SimSpirit motion simulator platform according to the provided instructions (Coming soon). Connect the ESP32 mainboard to their respective interfaces.
 4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the PlatformIO IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied. The SimSpirit firmware update is based on esp32doit-devkit-v1 setup on the PlatformIO.
