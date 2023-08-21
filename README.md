@@ -32,7 +32,7 @@ SimSpirit is an open-source motion simulator platform designed for immersive and
 
 To get started with SimSpirit, follow these steps:
 
-1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 or BNO085 IMU ViewTracer.
+1. **Hardware Requirements:** Ensure you have the necessary hardware components, including the SimSpirit motion simulator platform, ESP32 mainboard, and optional LSM6DS3 IMU ViewTracer.
 2. **Software Setup:** Install the required software dependencies and libraries on your development environment. This typically involves setting up the Arduino Programming in PlatformIO with the ESP32 board support package.
 3. **Assembly:** Assemble the SimSpirit motion simulator platform according to the provided instructions (Coming soon). Connect the ESP32 mainboard to their respective interfaces.
 4. **Firmware Upload:** Upload the SimSpirit firmware onto the ESP32 mainboard using the PlatformIO IDE or any compatible firmware uploading tool. Ensure proper configuration and calibration settings are applied. The SimSpirit firmware update is based on esp32doit-devkit-v1 setup on the PlatformIO.
